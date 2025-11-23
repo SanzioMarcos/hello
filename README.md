@@ -1,0 +1,9 @@
+# Hello - Exemplo simples de HTML
+
+Este é um exemplo minimalista usado para:
+- treinar Git
+- treinar GitHub
+- treinar DevOps básico
+
+
+# 👋 Hello — Exemplo simples em HTML
