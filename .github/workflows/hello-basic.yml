@@ -1,0 +1,27 @@
+name: Hello Basic CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  check-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Mensagem de boas-vindas
+        run: echo "Rodando workflow no repositório ${{ github.repository }}"
+
+      - name: Verificar se index.html existe
+        run: |
+          if [ ! -f index.html ]; then
+            echo "ERRO: index.html não encontrado na raiz do repositório."
+            exit 1
+          fi
+          echo "OK: index.html encontrado."
+          
